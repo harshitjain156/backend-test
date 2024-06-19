@@ -14,7 +14,7 @@ application.use(cors(corsOptions));
 // Middlewares for parsing JSON and URL-encoded data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({ origin: "http://localhost:3000" }));
+
 
 // patient auth route
 const patientAuthRoutes = require("./routes/patient.auth.routes");
