@@ -5,7 +5,12 @@ const cors = require("cors");
 
 //Initilizing app as express method
 const app = express();
-
+const corsOptions = {
+    origin: '*',
+    methods: ['POST', 'GET', 'PATCH', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}
+application.use(cors(corsOptions));
 // Middlewares for parsing JSON and URL-encoded data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
